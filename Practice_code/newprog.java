@@ -6,7 +6,9 @@ public class newprog {
     Integer a = 12412;
     Integer b = 12412;
     System.out.println(a.equals(b));
-    // Integer a[] = new Integer[16];
+    System.out.println((a instanceof Integer));
+    //
+    //Integer a[] = new Integer[16];
     // for(int i=0;i<16;i++)
     //    System.out.println(a[i]);
     List<String> l1 = new ArrayList<>();

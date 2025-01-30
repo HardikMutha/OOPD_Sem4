@@ -1,0 +1,5 @@
+ZoneA 25 60 6.5
+ZoneB 30 70 7.5
+ZoneC 20 40 5.5
+ZoneD 15 19 8.5
+ZoneE 25 65 4.4

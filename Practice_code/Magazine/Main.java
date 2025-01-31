@@ -29,6 +29,8 @@ public class Main {
             if(!isNullorBlank(publisher))
                 return publisher;
         }
+        // String publisher = scanner.nextLine();
+        // return publisher;
     }
 
     public static int promptForIssueNumber(Scanner scanner) {

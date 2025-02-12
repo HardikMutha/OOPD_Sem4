@@ -40,7 +40,7 @@ public class Main {
         }
         catch(IllegalArgumentException e)
         {
-            System.out.println("Nice Nigga");
+            System.out.println("Nice Bro");
             return true;
         }
     }

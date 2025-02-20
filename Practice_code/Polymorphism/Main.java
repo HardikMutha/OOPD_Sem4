@@ -8,7 +8,8 @@ public class Main {
         s1.area();
         s2.area();
         s3.area();
+        System.out.println(s2.nigg);
         // System.out.println(s2.x);
-        System.out.println(s4.x);
+        // System.out.println(s4.x);
     }
 }

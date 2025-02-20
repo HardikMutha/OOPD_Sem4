@@ -6,6 +6,7 @@ public class Main {
         Store store = new Store();
         store.addBook(book1);
         store.addBook(book2);
+        
     
         Book retrievedBook = store.getBook(0);
         System.out.println(retrievedBook.getTitle());

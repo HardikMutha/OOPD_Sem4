@@ -1,6 +1,7 @@
 import java.util.Objects;
 
 public class Book {
+    // private static int nigga = 12;
     private String title;
     private String author;
     private double rating;

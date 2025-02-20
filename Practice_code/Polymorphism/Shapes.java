@@ -1,4 +1,6 @@
-public class Shapes {
+public abstract class Shapes {
+    protected final int nigg = 12;
+    // abstract int x();
     public void area()
     {
         System.out.println("Area from Shapes Class");

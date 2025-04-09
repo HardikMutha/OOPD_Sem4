@@ -9,12 +9,15 @@ public class SimpleSwingForm extends JFrame {
     private JTextArea commentsArea;
     private JButton submitButton;
     private JButton clearButton;
+    private JRadioButton maleRadioButton;
+    private JRadioButton femaleRadioButton;
+    private ButtonGroup genderGroup;
     
     public SimpleSwingForm() {
         // Set up the frame
         super("User Registration Form");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(400, 350);
+        setSize(400, 400);
         setLocationRelativeTo(null);
         
         // Create main panel with border layout
@@ -22,9 +25,9 @@ public class SimpleSwingForm extends JFrame {
         mainPanel.setLayout(new BorderLayout(10, 10));
         mainPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         
-        // Create form panel
+        // Create form panel with more rows to accommodate gender selection
         JPanel formPanel = new JPanel();
-        formPanel.setLayout(new GridLayout(3, 2, 5, 10));
+        formPanel.setLayout(new GridLayout(4, 2, 5, 10));
         
         // Create form components
         JLabel nameLabel = new JLabel("Name:");
@@ -32,6 +35,25 @@ public class SimpleSwingForm extends JFrame {
         
         JLabel emailLabel = new JLabel("Email:");
         emailField = new JTextField(20);
+        
+        // Create gender radio buttons
+        JLabel genderLabel = new JLabel("Gender:");
+        JPanel genderPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 0, 0));
+        
+        maleRadioButton = new JRadioButton("Male");
+        femaleRadioButton = new JRadioButton("Female");
+        
+        // Group radio buttons to ensure only one can be selected
+        genderGroup = new ButtonGroup();
+        genderGroup.add(maleRadioButton);
+        genderGroup.add(femaleRadioButton);
+        
+        // Pre-select male option
+        maleRadioButton.setSelected(true);
+        
+        // Add radio buttons to the gender panel
+        genderPanel.add(maleRadioButton);
+        genderPanel.add(femaleRadioButton);
         
         JLabel commentsLabel = new JLabel("Comments:");
         commentsArea = new JTextArea(5, 20);
@@ -44,6 +66,8 @@ public class SimpleSwingForm extends JFrame {
         formPanel.add(nameField);
         formPanel.add(emailLabel);
         formPanel.add(emailField);
+        formPanel.add(genderLabel);
+        formPanel.add(genderPanel);
         formPanel.add(commentsLabel);
         formPanel.add(scrollPane);
         
@@ -63,6 +87,7 @@ public class SimpleSwingForm extends JFrame {
                 String name = nameField.getText();
                 String email = emailField.getText();
                 String comments = commentsArea.getText();
+                String gender = maleRadioButton.isSelected() ? "Male" : "Female";
                 
                 if (name.isEmpty() || email.isEmpty()) {
                     JOptionPane.showMessageDialog(SimpleSwingForm.this, 
@@ -74,6 +99,7 @@ public class SimpleSwingForm extends JFrame {
                         "Form submitted successfully!\n" +
                         "Name: " + name + "\n" +
                         "Email: " + email + "\n" +
+                        "Gender: " + gender + "\n" +
                         "Comments: " + comments,
                         "Success",
                         JOptionPane.INFORMATION_MESSAGE);
@@ -101,6 +127,7 @@ public class SimpleSwingForm extends JFrame {
         nameField.setText("");
         emailField.setText("");
         commentsArea.setText("");
+        maleRadioButton.setSelected(true);
         nameField.requestFocus();
     }
     

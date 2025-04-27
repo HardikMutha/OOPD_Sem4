@@ -10,6 +10,9 @@ public class CityPopulationTracker {
 
     public City getCity(String cityName)
     {
+      int x;
+      for(int i=0;i<10;i++)
+        System.out.println(x);
         return new City(cityPopulation.get(cityName));
     }
 

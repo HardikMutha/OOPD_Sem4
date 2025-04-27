@@ -17,6 +17,14 @@ public class Book {
     // Important doubt resolved;
     // When private variables are accessed within the same class there is no requirement to access them using getters and setters.
     // Since private allows direct access within the same class.
+    
+    Book(String author,double rating,double price,String title)
+    {
+      this.author = author;
+      this.rating = rating;
+      this.price = price;
+      this.title = title; 
+    }
     Book(Book newBook)
     {
         this.title = newBook.title;   // getters need not be used to access the title

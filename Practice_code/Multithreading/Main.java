@@ -39,7 +39,7 @@ public class Main {
     B obj2 = new B();
     // obj1.start();
     Thread t2 = new Thread(obj2);
-    t2.run();
+    // t2.run();
     // t2.start();
   }
 }

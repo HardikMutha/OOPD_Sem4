@@ -8,7 +8,7 @@ class Counter
   {
     synchronized(this)
     {
-      this.counter++;
+       counter++;
     }
   }
   public int getCounter()

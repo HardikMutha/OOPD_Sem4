@@ -1,7 +1,5 @@
-/**
- * Main
- */
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
   
@@ -30,6 +28,7 @@ public class Main {
     m1.set_x_y(12, 42);
     m1.printXY();
     m1.HelloWorld();
+    List<Integer> l1 = new ArrayList<>(); 
   }
   
 }
